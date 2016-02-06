@@ -32,5 +32,29 @@
 	  #TopMenu li{
 		  display:inline-block;
 		  list-style:none;
-		  padding: 5px;
+		  padding: 50px;
+		  font: bold 14px Tahoma;
+		  margin:20px auto;
+		  width: 300px;
+		  background-color: gray;
+		  height: 300px;
+		  text-align: center;
+		  padding-top: 100px;
+		  -webkit-border-radius:25px;
+	  }
+	  #BotMenu{-webkit-box-orient:horizontal;
+	  -webkit-box-flex:1;
+	  }
+	  
+	  #BotMenu li{
+		display:inline-block;
+		list-style:none;
+		padding: 5px;
+		font: bold 14px Tahoma;
+		margin-top: 10px;
+		margin: 30px auto;
+		width: 400px;
+		background-color:gray;
+		height: 100px;
+		-webkit-border-radius:25px;
 	  }
