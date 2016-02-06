@@ -9,9 +9,28 @@
       }
 	  #Report{
 		  width:100%;
-		  margin: 10px;
+		  margin: 20px 0px;
+		  margin-top:5px;
 		  padding: 5px;
 		  height: 1200px;
 		  display:-webkit-box;
 		  -webkit-box-pack:center;
+		  
+	  }
+	  #Menu{
+		max-width: 1000px;
+		  -webkit-box-orient: horizontal;
+		  -webkit-box-flex: 1;
+		  background-image: url("http://legendarywomen.org/sites/default/files/CDRF%20Image.gif");
+		  text-align:center;
+		  border: 3px solid black;  
+	  }
+	  #TopMenu{
+		  -webkit-box-orient:horizontal;
+		  -webkit-box-flex:1;
+	  }
+	  #TopMenu li{
+		  display:inline-block;
+		  list-style:none;
+		  padding: 5px;
 	  }
