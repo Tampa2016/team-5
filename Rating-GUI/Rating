@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- If IE use the latest rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Set the page to the width of the device and set the zoon level -->
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title></title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+<style>
+.jumbotron{
+    background-color:silver;
+    color:white;
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+.indented {
+margin: 10px;
+}
+</style>
+
+
+
+
+</head>
+<body>
+
+<!-- CONTAINERS -->
+<!-- container puts padding around itself while container-fluid fills the whole screen. Bootstap grids require a container. -->
+<div class="container">
+
+<!-- page-header adds space aroundtext and enlarges it. It also adds an underline at the end -->
+<div class="page-header">
+</div>
+
+<div class="jumbotron">
+
+<!-- BUTTONS -->
+<!-- There are many built in button colors and sizes. If a link is to trigger in page functionality it should use role="button". The button element should be used in most situations -->
+<a href=index.html class = "btn btn-default btn" role="button">Back</a>
+
+
+<p class="indented" >John's Pizza</p>
+
+<div id="StarRatings" class="indented"> 
+
+</div>
+
+
+
+<img src="pic1.png" class="img-responsive indented" alt="Cinque Terre">
+<p></p><p></p><p> Reviews: </p>
+
+<a href="#" class = "btn btn-default btn" role="button">Accessible</a>
+<a href="#" class = "btn btn-default btn" role="button">Inaccessible</a>
+
+<script type="text/javascript">
+var rating = 5;
+document.getElementById("StarRatings").innerHTML = '<img src = "StarRatingImages/'+rating+'.jpg" width = "10%"/>';
+</script>
