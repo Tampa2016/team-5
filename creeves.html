@@ -15,6 +15,7 @@
         height: 100%;
       }
     </style>
+	<script src="myscript.js"></script>
     <script>
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
@@ -46,6 +47,7 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       createMarker(results[i]);
     }
+	localStorage.locationName=results[0].name;
   }
 }
 
@@ -68,10 +70,23 @@ function createMarker(place) {
 }
 
     </script>
-  </head>
+	</head>
   <body>
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC10jykHTGCP6UAEumLRdaTQNPPLJ2JUZ8&signed_in=true&libraries=places&callback=initMap" async defer></script>
-  <div id="Report">Checkpoint</div>
+  <div id="Report">
+	<div id="Menu">
+		<nav id="TopMenu">
+			<li><a href="sub.html">Users</a></li>
+			<li><a href="www.bing.com">Business</a></li>
+		</nav>
+		<nav id="BotMenu">
+			<li><a href="www.something.com">Take a Picture</a></li>
+			<li><a href="register.html">Tell Us About Yourself</a></li>
+		</nav>
+	</div>
+  </div>
+  <div id="Sub">checkpoint
+  </div>
   </body>
 </html>
