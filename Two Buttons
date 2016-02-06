@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<form>
+   <input type="submit" name="prev" value="User" /> <!-- This is the button that will submit -->
+   <input type="submit" name="next" value="Business" /> <!-- But this is the button that I WANT to submit -->
+</form>
