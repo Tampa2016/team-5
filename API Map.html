@@ -58,7 +58,12 @@ function createMarker(place) {
 
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent(place.name);
+	var r = confirm("Would you like to make a report on " + place.name + "?");
+	if (r){location.href='#Report';}
+	else{alert("My mistake, please choose another location.");}
+	
     infowindow.open(map, this);
+	map.setCenter(marker.getPosition());
   });
 }
 
@@ -67,5 +72,6 @@ function createMarker(place) {
   <body>
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC10jykHTGCP6UAEumLRdaTQNPPLJ2JUZ8&signed_in=true&libraries=places&callback=initMap" async defer></script>
+  <div id="Report">Checkpoint</div>
   </body>
 </html>
