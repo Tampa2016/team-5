@@ -3,13 +3,101 @@
 <title>Make A Report</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-	<link rel="stylesheet" href="main2.css">
-	<header>
-	</header>
+	<link rel="stylesheet" href="main.css">
+	<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+	  div li{display:inline-block;
+		  list-style:none;
+		  padding: 50px;
+		  font: bold 14px Tahoma;
+		  margin:20px auto;
+		  width: 300px;
+		  background-color: gray;
+		  height: 50px;
+		  text-align: center;
+		  padding-top: 100px;
+		  -webkit-border-radius:25px;}
+		  input[type='checkbox'] {
+    width: 30px;
+    height: 30px;        
+}
+	input[type='radio'] {
+    width: 30px;
+    height: 30px;        
+}
+    </style>
+	<head>
+	<script src="myscript.js"></script>
+	</head>
 	<body>
 		<form>
 		Would you like to report accessibility or inaccessibility? <select><option value="A">Accessibility</option>
 		<option value="I">Inaccessibility</option></select>
 		</form>
+		<br />Is the location you are talking about <script>
+				document.write('<div>' + localStorage.locationName + '</div>');
+				</script><form>
+  <input type="radio" name="Yes" value="Yes"> Yes
+  <input type="radio" name="No" value="No"> No<br>
+</form>
+			
+			<form><script>var x = document.createElement("INPUT");
+			x.setAttribute("type", "radio");</script></form>
+		<br /><b><u>Checklist</u></b>
+		
+		<form action="demo_form.asp">Ramps
+		<input type="checkbox" name="Ramps" value="Ramps"><br />Wide Aisles
+		<input type="checkbox" name="Wide_Aisles" value = "Wide Aisles"><br />
+		Large Restroom Stalls
+		<input type="checkbox" name="Wide_Aisles" value = "Rest stalls"><br />
+		Parking Slots
+		<input type="checkbox" name="Wide_Aisles" value = "park"><br />
+		</form>
+		<br />
+		Comment<br />
+<textarea id="title" type="text "rows="10" cols="20" onkeyup="Allow()" ></textarea>
+<input type="submit" value="Submit" onclick="insert()" /></form>
+<div id="display"></div>
+
+
+<script type="text/javascript">
+
+var titles = [];
+var titleInput = document.getElementById("title");
+var messageBox = document.getElementById("display");
+
+function Allow()
+{
+if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+{
+user.title.value="";
+alert("Please Enter only alphabets");
+}
+
+window.location.reload()
+}
+
+function insert () {
+titles.push(titleInput.value);
+clearAndShow();
+}
+
+function clearAndShow () 
+{
+titleInput.value = "";
+messageBox.innerHTML = "";
+messageBox.innerHTML += " " + "Thanks for your feedback!" + "<br/>";
+}</script>
+<div>
+			<li id="but"><a href="register.html">Register</a></li>
+			<li id="but"><a href="thanks.html">Exit</a></li>
+</div>
 	</body>
 </html>
